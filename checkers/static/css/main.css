@@ -1,0 +1,311 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: 60px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px; 
+    background-color: #f5f5f5;
+}
+  
+
+/* Main */
+
+.main {
+
+}
+
+.game {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    background: #edf2ff;
+    color: #4a4a4a;
+}
+
+.game:hover,
+.game:focus {
+    background: #f8f8f8;
+    color: #000;
+}
+
+.game h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+/* Board */
+
+.board {
+
+}
+
+.board td {
+    position: relative;
+    background: #fff;
+    width: 10%;
+    padding-bottom: 10%;
+}
+
+.board tr:nth-child(odd) td:nth-child(even),
+.board tr:nth-child(even) td:nth-child(odd) {
+    background: #aaa;
+}
+
+.box.box--moveable {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    bottom: 0;
+    left: 20%;
+    display: block;
+    width: 60%;
+    height: 60%;
+    background: #1c86f2;
+    border-radius: 50%;
+}
+
+.box.box--moveable:hover,
+.box-.box--moveable:focus {
+    background: #f03c69;
+}
+
+.piece {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -0.75rem;
+    margin-left: -0.75rem;
+    border-radius: 50%;
+    font-size: 1.125rem;
+}
+
+a.piece.player2 {
+    color: #000;
+}
+
+a.piece.player1 {
+    color: #fff;
+}
+
+a.piece:hover,
+a.piece:focus,
+.piece--selected {
+    box-shadow: 0 0 10px 5px #1c86f2;
+}
+
+.piece--man {
+    
+}
+
+.piece--king {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+}
+
+.player1.piece {
+    background-color: #000;
+}
+
+.player2.piece {
+    background-color: #fff;
+}
+
+.player1.piece--king {
+    background-image: url(../img/crown_white.png);
+}
+
+.player2.piece--king {
+    background-image: url(../img/crown_black.png);
+}
+
+.loses {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.loses__lost {
+    display: block;
+    margin: 0.125rem 0;
+}
+
+.lost-piece {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+}
+
+.loses--white .lost-piece {
+    background: #999;
+    margin-left: auto;
+}
+
+.loses--black .lost-piece {
+    background: #333;
+}
+  
+@media screen and (min-width: 586px) {
+    .piece {
+        width: 2rem;
+        height: 2rem;
+        margin-top: -1.25rem;
+        margin-left: -1.25rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    
+    .piece {
+        width: 3rem;
+        height: 3rem;
+        margin-left: -1.625rem;
+        margin-top: -1.625rem;
+        font-size: 2rem;
+    }
+    
+    .piece--king {
+        
+    }
+
+    
+}
+
+@media screen and (min-width: 980px) {
+
+    .piece {
+        width: 3rem;
+        height: 3rem;
+        margin-top: -2rem;
+        margin-left: -2rem;
+        font-size: 3rem;
+    }
+    
+    .loses__lost {
+        margin: 0.35rem;
+    }
+    
+    .lost-piece {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+}
+
+
+/* General */
+
+.visuallyhidden { 
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    overflow-y: scroll;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.main {
+    display: flex;
+    position: relative;
+    flex: 2 0;
+    flex-direction: column;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    transition: all .1s;
+}
+
+.container {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container--wide {
+    max-width: 80rem;
+}
+
+.container--narrow {
+    max-width: 40rem;
+}
+
+
+
+@media screen and (min-width: 586px) {
+    .piece {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-top: -1.25rem;
+        margin-left: -1.25rem;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    
+    .piece {
+        width: 3.25rem;
+        height: 3.25rem;
+        margin-left: -1.625rem;
+        margin-top: -1.625rem;
+        font-size: 2.75rem;
+    }
+    
+    .piece--king {
+        
+    }
+
+    
+}
+
+@media screen and (min-width: 980px) {
+
+    .piece {
+        width: 3rem;
+        height: 3rem;
+        margin-top: -1.5rem;
+        margin-left: -1.5rem;
+        font-size: 3rem;
+    }
+    
+    .loses__lost {
+        margin: 0.35rem;
+    }
+    
+    .lost-piece {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+}

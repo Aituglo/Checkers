@@ -1,0 +1,12 @@
+{% extends "template.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-3">Checkers</h1>
+        <p>Welcome to our Checkers Game created for our TIPE to illustrate the min max algorithm.</p>
+        <p><a class="btn btn-primary btn-lg" href="{{ url_for('play') }}" role="button">Let's go</a></p>
+    </div>
+</div>
+{% endblock %}
