@@ -8,9 +8,7 @@ from .MinMax import MinMax
 
 
 class Game:
-    """
 
-    """
     def __init__(self):
         """
         Classe Game, principale du jeu

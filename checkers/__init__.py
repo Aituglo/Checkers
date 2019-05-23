@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect, url_for, request, flash
-from .resources.Game import Game
+from .classes.Game import Game
 
 app = Flask(__name__)
 app.secret_key = 'TIP 2018/2019'
