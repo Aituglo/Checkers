@@ -62,6 +62,13 @@ class Game:
 
         return ok
 
+    def restart(self):
+        # Joueur Noir
+        self. __init__()
+
+        return True
+
+
 
     def check_status(self):
         """

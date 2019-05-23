@@ -14,6 +14,12 @@ def index():
 def play():
     return render_template('play.html')
 
+@app.route("/restart")
+def restart():
+    games.restart()
+
+    return render_template('play.html')
+
 
 @app.route('/board/select/<int:coordinate_x>/<int:coordinate_y>')
 def select(coordinate_x, coordinate_y):
